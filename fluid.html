@@ -18,6 +18,30 @@
       .sidebar-nav {
         padding: 9px 0;
       }
+
+.sidebar-nav > li > a {
+display: block;
+margin: 0 0 -1px;
+padding: 8px 14px;
+border: 1px solid 
+#e5e5e5;
+width: 220px;
+}
+
+.sidebar-nav .icon-chevron-right {
+float: right;
+margin-top: 2px;
+margin-right: -6px;
+opacity: .25;
+}
+
+
+ .affix {
+    position: fixed;
+  }
+section {
+padding-top: 30px;
+}
     </style>
     <!-- link href="../assets/css/bootstrap-responsive.css" rel="stylesheet" -->
 
@@ -34,9 +58,9 @@
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png" />
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".sidebar-nav">
 
-    <div class="navbar navbar-fixed-top" data-spy="affix" data-offset-top="200">
+    <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -62,30 +86,19 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Sidebar</li>
-              <li class="active"><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li class="nav-header">Sidebar</li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
-              <li><a href="#">Link</a></li>
+          <div class="sidebar-nav"> 
+            <ul class="nav sidebar-nav nav-list" data-spy="affix" >
+              <li><a href="#Overview"><i class="icon-chevron-right"></i>Overview</a></li>
+              <li><a href="#Online_Objects"><i class="icon-chevron-right"></i>Online Objects</a></li>
+              <li><a href="#Contact_Information"><i class="icon-chevron-right"></i>Contact Information</a></li>
+              <li><a href="#Entire_Guide"><i class="icon-chevron-right"></i>Entire Guide</a></li>
+              <li><a href="#Collection_Details"><i class="icon-chevron-right"></i>Collection Details</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
-            <h1>
+            <h1 id="top">
 Hello World Collection of Library Assessment Ipsum
 </h1>
             <p>Colleciton Number: ### at Contributing Institution</p>
